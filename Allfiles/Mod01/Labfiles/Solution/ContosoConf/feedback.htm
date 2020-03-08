@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ContosoConf Feedback</title>
+        
+        <link href="styles/site.css" rel="stylesheet" type="text/css" />
+        <link href="styles/nav.css" rel="stylesheet" type="text/css" />
+        <link href="styles/header.css" rel="stylesheet" type="text/css" />
+        <link href="styles/footer.css" rel="stylesheet" type="text/css" />
+        
+        <link href="styles/pages/feedback.css" rel="stylesheet" type="text/css" />
+        
+        <link href="styles/mobile.css" rel="stylesheet" type="text/css" />
+        <link href="styles/print.css" media="print" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        
+        <nav class="page-nav">
+            <div class="container">
+                <a href="index.htm" >Accueil</a>
+                <a href="about.htm" >A Propos</a>
+                <a href="schedule.htm">Programmation</a>
+                <a href="register.htm">Inscription</a>
+                <a href="location.htm">Venir</a>
+                <a href="live.htm">Live</a>
+                <a href="feedback.htm" class="active">Commentaires</a>
+            </div>
+        </nav>
+        
+        <header class="page-header">
+            <div class="container">
+                <h1>ContosoConf</h1>
+                <p class="tag-line">Une conférence en deux volets sur les derniers développements HTML5</p>
+            </div>
+        </header>
+        
+        <section class="page-section feedback">
+            <div class="container">
+                <section id="feedback">
+                    <h1>Content de la Conférence? LAissez nous un commentaire!</h1>
+                    <form method="post" action="/send-feedback">
+                        <div class="field feedback-question">
+                            <label>Comment évalueriez-vous les compétences techniques de l'intervenant?</label>
+                            <input name="question" type="range" min="1" max="5"/>
+                        </div>
+                        <div class="field feedback-question">
+                            <label>Dans quelle mesure avez-vous bien entendu l'orateur?</label>
+                            <input name="question" type="range" min="1" max="5"/>
+                        </div>
+                        <div class="field feedback-question">
+                            <label>Comment évalueriez vous l'intérêt des sujets évoqués au cours de la conférence?</label>
+                            <input name="question" type="range" min="1" max="5"/>
+                        </div>
+                        <div class="field feedback-question">
+                            <label>Comment évalueriez-vous la session dans son ensemble?</label>
+                            <input name="question" type="range" min="1" max="5"/>
+                        </div>
+                        <div class="field comments">
+                            <label>Autres commentaires?</label>
+                            <textarea name="comments" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="field actions">
+                            <button type="submit">Envoyer votre commentaire</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <section id="feedback-sent">
+                    <h1>Merci pour votre retour</h1>
+                </section>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div class="container">
+                <p>
+                    Hébergé parContoso
+                </p>
+                <address>
+                    Conference Center<br />
+                    1234 Main Street<br />
+                    Seattle<br />
+                    WA 98999
+                </address>
+                <p>
+                    &#169; 2020 Contoso
+                </p>
+            </div>
+    </footer>
+
+        <script src="dist/feedback.bundle.js" type="module"></script>
+    </body>
+</html>
