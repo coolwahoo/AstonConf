@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <title>Register for ContosoConf</title>
+        <title>Inscription à ContosoConf</title>
         
         <link href="styles/site.css" rel="stylesheet" type="text/css" />
         <link href="styles/nav.css" rel="stylesheet" type="text/css" />
         <link href="styles/header.css" rel="stylesheet" type="text/css" />
         <link href="styles/footer.css" rel="stylesheet" type="text/css" />
         
-        <link href="styles/pages/register.css" rel="stylesheet" type="text/css" />
+        <link href="styles/pages/about.css" rel="stylesheet" type="text/css" />
         
         <link href="styles/mobile.css" rel="stylesheet" type="text/css" />
         <link href="styles/print.css" media="print" rel="stylesheet" type="text/css" />
@@ -18,13 +18,13 @@
         
         <nav class="page-nav">
             <div class="container">
-                <a href="index.htm">Home</a>
-                <a href="about.htm">About</a>
-                <a href="schedule.htm">Schedule</a>
-                <a href="register.htm" class="active">Register</a>
-                <a href="location.htm">Location</a>
+                <a href="index.htm" >Accueil</a>
+                <a href="about.htm" class="active">A Propos</a>
+                <a href="schedule.htm">Programmation</a>
+                <a href="register.htm">Inscription</a>
+                <a href="location.htm">Venir</a>
                 <a href="live.htm">Live</a>
-                <a href="feedback.htm">Feedback</a>
+                <a href="feedback.htm">Commentaires</a>
             </div>
         </nav>
         
@@ -37,34 +37,34 @@
         
         <section class="page-section register">
             <div class="container">
-                <h1>Register for the conference</h1>
-                <form method="post" action="http://astonconf.azurewebsites.net/api/registration/" id="registration-form">
+                <h1>S'inscrire à la conférence</h1>
+                <form method="post" action="http://astonconf.azurewebsites.net/registration/" id="registration-form">
                     <div class="field">
-                        <label for="first-name">First name:</label>
+                        <label for="first-name">Prénom:</label>
                         <input type="text" id="first-name" name="FirstName" required="required" autofocus="autofocus"/>
                     </div>
                     <div class="field">
-                        <label for="last-name">Last name:</label>
+                        <label for="last-name">Nom:</label>
                         <input type="text" id="last-name" name="LastName" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="email-address">Email address:</label>
+                        <label for="email-address">Email :</label>
                         <input type="email" id="email-address" name="EmailAddress" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="password">Choose a password:</label>
+                        <label for="password">Choisir un mot de passe:</label>
                         <input type="password" id="password" name="Password" required="required" pattern="[a-zA-Z0-9]{5,}" title="At least 5 letters and numbers"/>
                     </div>
                     <div class="field">
-                        <label for="confirm-password">Confirm your password:</label>
+                        <label for="confirm-password">Confirmer le mot de passe:</label>
                         <input type="password" id="confirm-password" name="ConfirmPassword" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="website">Website/blog:</label>
+                        <label for="website">Site/Blog:</label>
                         <input type="url" id="website" name="WebsiteUrl" placeholder="http://"/>
                     </div>
                     <div>
-                        <button type="submit">Register</button>
+                        <button type="submit">S'inscrire</button>
                     </div>
                 </form>
 
@@ -74,7 +74,7 @@
         <footer class="page-footer">
             <div class="container">
                 <p>
-                    Hosted by Contoso
+                    Hébergé par Contoso
                 </p>
                 <address>
                     Conference Center<br />
@@ -83,7 +83,7 @@
                     WA 98999
                 </address>
                 <p>
-                    &#169; 2012 Contoso
+                    &#169; 2020 Contoso
                 </p>
             </div>
         </footer>
