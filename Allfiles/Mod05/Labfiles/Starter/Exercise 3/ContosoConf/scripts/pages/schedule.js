@@ -6,13 +6,13 @@ const track2CheckBox = document.getElementById("show-track-2");
 const downloadSchedule = () => {
 
     const request = new XMLHttpRequest();
-    request.open("GET", "https://astonconf.azurewebsites.net/api/schedule/", true);
+    request.open("GET", "https://astonconf.azurewebsites.net/schedule/list/", true);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             try {
                 const response = JSON.parse(request.responseText);
                 if (request.status === 200) {
-                    schedules = response;
+                    schedules = response.schedule;
                     displaySchedule();
                 } else {
                     alert(response.message);
@@ -63,7 +63,7 @@ const displaySchedule = () => {
 
 const saveStar = (sessionId, isStarred) => {
     const request = new XMLHttpRequest();
-    request.open("POST", "/schedule/star/" + sessionId, true);
+    request.open("POST", "https://astonconf.azurewebsites.net/schedule/star/" + sessionId, true);
 
     if (isStarred) {
         request.onreadystatechange = function() {

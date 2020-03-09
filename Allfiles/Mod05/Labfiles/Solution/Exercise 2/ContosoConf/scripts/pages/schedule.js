@@ -5,13 +5,13 @@ const track2CheckBox = document.getElementById("show-track-2");
 
 function downloadSchedule() {
     const request = new XMLHttpRequest();
-    request.open("GET", "http://astonconf.azurewebsites.net/api/schedule", true);
+    request.open("GET", "https://astonconf.azurewebsites.net/schedule/list/", true);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             try {
                 const response = JSON.parse(request.responseText);
                 if (request.status === 200) {
-                    schedule = response;
+                    schedule = response.schedule;
                     displaySchedule();
                 } else {
                     alert(response.message);
@@ -67,7 +67,7 @@ function saveStar(sessionId, isStarred) {
     //       The response contains a JSON object "{ starCount: <number> }"
     //       If the star count is more than 50, warn the user about this being a busy session.
     const request = new XMLHttpRequest();
-    request.open("POST", "http://astonconf.azurewebsites.net/api/schedule/star/" + sessionId, true);
+    request.open("POST", "https://astonconf.azurewebsites.net/schedule/star/" + sessionId, true);
     if (isStarred) {
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status === 200) {

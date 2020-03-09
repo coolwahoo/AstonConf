@@ -5,6 +5,7 @@
     width: 15px;
     height: 15px;
     cursor: pointer;
+    background-color: transparent;
     background-image: url(../images/stars.png);
     background-position: 0 0;
 }

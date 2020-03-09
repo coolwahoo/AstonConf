@@ -5,13 +5,13 @@ const track2CheckBox = document.getElementById("show-track-2");
 
 function downloadSchedule() {
     const request = new XMLHttpRequest();
-    request.open("GET", "https://astonconf.azurewebsites.net/api/schedule/", true);
+    request.open("GET", "https://astonconf.azurewebsites.net/schedule/list/", true);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             try {
                 const response = JSON.parse(request.responseText);
                 if (request.status === 200) {
-                    schedule = response;
+                    schedule = response.schedule;
                     displaySchedule();
                 } else {
                     alert(response.message);
@@ -61,7 +61,7 @@ function displaySchedule() {
 }
 
 function saveStar(sessionId, isStarred) {
-    // TODO: Create an XMLHttpRequest that POSTs to "/schedule/star/{sessionId}"
+    // TODO: Create an XMLHttpRequest that POSTs to "https://astonconf.azurewebsites.net//schedule/star/{sessionId}"
     //       The request body must have the content type "application/x-www-form-urlencoded"
     //       e.g. "starred=true" or "starred=false"
     //       The response contains a JSON object "{ starCount: <number> }"
